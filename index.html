@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body class="flex-column">
+    <header class="hero mb-2">
+        <h1 class="title p-2">Weather Dashboard</h1>
+    </header>
+    <main class="flex-row justify-content-between">
+        <section class="city-list col-2 col-md-2 col-sm-6">
+
+            <div class="city-search">
+                <h3>Search for a City:</h3>
+                <form id="city-form" class="form">
+                  <input required name="city" id="city-input" type="text" autofocus="true" class="form-input" placeholder="City Name"/>
+                  <button type="submit" class="btn" id="search-button">Search</button>
+                </form>
+            </div>
+
+            <hr class="hr">
+
+            <div class="list-history" id="history"></div>
+
+        </section>
+
+        <section class="col-10 col-md-10 col-sm-6">
+            <div>
+                <div id="current-day">
+                    <h3></h3>
+                    <p id="current-temp"></p>
+                    <p id=current-wind></p>
+                    <p id="current-humidity"></p>
+                    <p class="rounded" id="current-uv"></p>
+                </div>
+                <div id="future-days">
+                    <h3></h3>
+                    <div class ="row" id="future-day-cards"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
