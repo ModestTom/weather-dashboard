@@ -143,7 +143,7 @@ $("#city-form").on('submit', function(event) {
     getLatLong(city);
 });
 
-$("#history").children("button").on('click', function(event) {
+$("#history").children("button").on('click', function() {
     city = $(this).text();
     getLatLong(city);
 });
