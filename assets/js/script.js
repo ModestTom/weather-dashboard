@@ -10,7 +10,6 @@ var historyList = document.querySelector('#history');
 var city = "";
 
 function getLatLong(data) {
-    console.log(data);
     
     var coordinatesUrl = `${rootUrl}/geo/1.0/direct?q=${data}&limit=5&appid=${apiKey}`;
 
@@ -131,8 +130,6 @@ function loadHistory() {
         cityList.textContent = searchHistory[index].savedCity;
         historyList.appendChild(cityList);
     };
-
-    console.log(historyList.childNodes);
 }
 
 loadHistory();
